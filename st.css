@@ -1,0 +1,19 @@
+
+
+.content-details{
+    width: 5%;
+}
+.slider-details {
+    width: 100%;
+  }
+  .slider-details img{
+    width: 100%;
+  }
+  .main-details{
+    display: flex;
+    justify-content: space-between;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+  }

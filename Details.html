@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet"  href="normalize.css">
+	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"  href="stylesII.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="main-details">
+
+    <div class="content-details">
+        <div class="slider-details"> <div class="container-details">
+            <div class="slider">
+             <i class="fa-solid fa-arrow-right  arrow-left" ></i>
+             <img src="./1.png" alt="Slide 1">
+             <img src="./2.png"  alt="Slide 2">
+             <img src="./3.png"  alt="Slide 3">
+             <i class="fa-solid fa-arrow-right arrow-right"></i>
+             <div class="slides-bottom">
+             <div class="slide-bottom"></div>
+             <div class="slide-bottom"></div>
+             <div class="slide-bottom"></div>
+         </div>  
+         </div>
+         </div>
+        </div>
+        <div class="price-details">
+            <p class="price">
+                850,000 ج.م
+            </p>
+            <p class="information">
+                فيلا كبيره للايجار بقلب ( مينا جاردن سيتي ) بتشطيب فاخر
+            </p>
+            <div class="city-details">
+            <img class="location-icon" src="./imgs/location.png" alt="">
+            <span class="city"> 
+                مينا جاردن سيتي، 6 أكتوبر
+            </span>
+        </div>
+        </div>
+        <div class="info-details">
+            <p>التفاصيل</p>
+            <div class="table-details">
+                <div class="col-details">
+                    <div class="row-details">
+                    <span>النوع</span>
+                    <span>نوع السعر</span>
+                    <span>غرف نوم</span>
+                    <span>فيديو</span>
+                </div>
+                <div class="row-details">
+                    <span class="active-span-details">تاون هاوس</span>
+                    <span class="active-span-details">السعر</span>
+                    <span class="active-span-details">4</span>
+                    <span class="active-span-details">غير متوفر</span>
+                </div>
+                </div>
+                <div class="col-details">
+                    <div class="row-details">
+                    <span>السعر</span>
+                    <span> المساحة (م٢)</span>
+                    <span> الحمامات</span>
+                    <span>جولة افتراضية</span>
+                </span>
+            </div>
+            <div class="row-details">
+                <span class="active-span-details"> 35,000</span>
+                    <span class="active-span-details">245</span>
+                    <span class="active-span-details">3</span>
+                    <span class="active-span-details">غير متوفر</span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="info2-details">
+            <p>الوصف</p>
+            <span>تاون هاوس ميدل في مينا جاردن سيتي
+مساحة الارض حوالي ٢٧٠ م
+مساحة المباني ٢٤٥ م ارضي ودورين
+الارضي: ريسيبشن + مطبخ + حمام ضيوف
+الدور الاول: ٣ غرف + حمام
+الدور الثاني : غرفة ماستر بالحمام والبلكونه
+اقل مده للايجار سنه
+
+(( اترك رقمك نبعتلك كل التفاصيل واتس او اتواصل علي  01284839911))</span>
+        </div>
+        <div class="location-details">
+            <p>الموقع</p>
+            <div class="city-details">
+                <img class="location-icon" src="./imgs/location.png" alt="">
+                <span class="city"> 
+                    مينا جاردن سيتي، 6 أكتوبر
+                </span>
+            </div>
+            <div class="map-details">
+            <img src="./imgs/Map.png" alt="">
+            <button>انظر الموقع</button>
+        </div>
+        </div>
+    </div>
+    <div class="contact-details">
+        <p>سلامتك تهمنا</p>
+        <ul class="instruction">
+            <li>قابل البايع في مكان عام زي المترو أو المولات أو محطات البنزين</li>
+            <li>خد حد معاك وانت رايح تقابل البايع أو المشتري
+            </li>
+            <li>عاين المنتج كويس قبل ما تشتري وتأكد ان سعره مناسب
+            </li>
+            <li>متدفعش او تحول فلوس الا لما تعاين المنتج كويس
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="slider.js"></script>
+<script>
+    // Get references to the tab links and content divs
+    const tabLinks = document.querySelectorAll(".data-head .link");
+    const contentDivs = document.querySelectorAll(".data-catcher > div");
+
+    // Show the initial default content (ad-details) and hide the others
+    contentDivs[0].style.display = "block";
+    for (let i = 1; i < contentDivs.length; i++) {
+        contentDivs[i].style.display = "none";
+    }
+    tabLinks[0].classList.add("link-active");
+
+    // Add click event listeners to the tab links
+    tabLinks.forEach((tabLink, index) => {
+        tabLink.addEventListener("click", () => {
+            // Hide all content divs
+            contentDivs.forEach(contentDiv => {
+                contentDiv.style.display = "none";
+            });
+
+            // Show the clicked content div
+            contentDivs[index].style.display = "block";
+
+            // Remove active class from all tab links
+            tabLinks.forEach(link => {
+                link.classList.remove("link-active");
+            });
+
+            // Add active class to the clicked tab link
+            tabLink.classList.add("link-active");
+        });
+    });
+</script>
+</body>
+</html>
